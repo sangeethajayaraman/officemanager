@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.officemanager.core.persistence.DesignationMapper">
+    <insert id="insert" parameterType="Designation" useGeneratedKeys="true" keyProperty="designationId">
+        INSERT INTO DESIGNATION (NAME, DESCRIPTION, REPORT_TO)
+        VALUES (#{name}, #{description}, #{reportTo})
+    </insert>
+
+    <update id="update" parameterType="Designation">
+        UPDATE DESIGNATION SET
+          NAME = #{name},
+          DESCRIPTION = #{description},
+          REPORT_TO = #{reportTo}
+        WHERE DESIGNATION_ID = #{designationId}
+    </update>
+
+    <resultMap id="designationResultMap" type="Designation">
+        <id property="designationId" column="DESIGNATION_ID" />
+        <result property="name" column="NAME" />
+        <result property="description" column="DESCRIPTION" />
+        <result property="reportTo" column="REPORT_TO" />
+    </resultMap>
+
+    <select id="findById" parameterType="integer" resultMap="designationResultMap">
+        SELECT DESIGNATION_ID,
+          NAME,
+          DESCRIPTION,
+          REPORT_TO
+        FROM DESIGNATION
+        WHERE DESIGNATION_ID = #{designationId}
+    </select>
+
+    <select id="findAll" resultMap="designationResultMap">
+        SELECT DESIGNATION_ID,
+          NAME,
+          DESCRIPTION,
+          REPORT_TO
+        FROM DESIGNATION
+    </select>
+</mapper>

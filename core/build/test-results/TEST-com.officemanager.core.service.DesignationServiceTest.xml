@@ -1,0 +1,7 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.officemanager.core.service.DesignationServiceTest" tests="1" failures="0" errors="0" timestamp="2014-02-19T23:26:21" hostname="Richards-MacBook-Pro.local" time="0.147">
+  <properties/>
+  <testcase name="should do insert if designationId is null otherwise do update" classname="com.officemanager.core.service.DesignationServiceTest" time="0.147"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

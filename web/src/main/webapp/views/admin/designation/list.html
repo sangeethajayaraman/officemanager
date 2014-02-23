@@ -1,0 +1,54 @@
+<div class="page-title">
+    <h2><i class="icon-desktop color"></i> Designations <small>Subtext for header</small></h2>
+    <hr />
+</div>
+<!-- Page title -->
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="awidget">
+            <div class="awidget-head">
+                <h3>Table #2</h3>
+            </div>
+            <div class="awidget-body">
+                <table class="table table-hover table-bordered ">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Reports to</th>
+                        <th>Control</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr ng-repeat='designation in designations'>
+                        <td><a ng-href='#/designations/{{designation.designationId}}'>{{designation.designationId}}</a></td>
+                        <td>{{designation.name}}</td>
+                        <td>{{designation.description}}</td>
+                        <td>{{designation.reportTo}}</td>
+                        <td>
+
+                            <button class="btn btn-xs btn-success"><i class="icon-ok"></i> </button>
+                            <button class="btn btn-xs btn-warning"><i class="icon-pencil"></i> </button>
+                            <button class="btn btn-xs btn-danger"><i class="icon-remove"></i> </button>
+
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+
+                <hr />
+                <a href="#" class="btn btn-info pull-left">Add Designation</a>
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

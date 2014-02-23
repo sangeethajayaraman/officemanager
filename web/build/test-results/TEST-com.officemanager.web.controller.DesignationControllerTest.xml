@@ -1,0 +1,8 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<testsuite name="com.officemanager.web.controller.DesignationControllerTest" tests="1" failures="0" errors="0" timestamp="2014-02-19T23:26:24" hostname="Richards-MacBook-Pro.local" time="0.25">
+  <properties/>
+  <testcase name="should get a list of all available designations" classname="com.officemanager.web.controller.DesignationControllerTest" time="0.25"/>
+  <system-out><![CDATA[23:26:24.320 [Test worker] DEBUG o.s.test.util.ReflectionTestUtils - Setting field [designationService] of type [null] on target [com.officemanager.web.controller.DesignationController@191e8b08] to value [Mock for type 'DesignationService' named 'mockDesignationService']
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
